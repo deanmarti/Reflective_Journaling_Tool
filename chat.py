@@ -39,15 +39,18 @@ def open_yaml(filepath):
 ###     API functions
 
 
-def chatbot(conversation, model="gpt-4-0613", temperature=0):
+def chatbot(conversation, temperature=0):
     max_retry = 7
     retry = 0
     while True:
         try:
             spinner = Halo(text='AI', spinner='dots')
             spinner.start()
-            
-            response = openai.ChatCompletion.create(model=model, messages=conversation, temperature=temperature)
+            openai.api_type = "azure"
+         ##   openai.api_base = "https://sixopenaiinstancefrance0001.openai.azure.com"
+            openai.api_version = "2023-06-01-preview"
+                        
+            response = openai.ChatCompletion.create(engine="gpt4-32", messages=conversation, temperature=temperature)
             text = response['choices'][0]['message']['content']
 
             spinner.stop()
@@ -109,6 +112,7 @@ def generate_chat_response(ALL_MESSAGES, conversation):
 if __name__ == '__main__':
     # instantiate chatbot, variables
     openai.api_key = open_file('key_openai.txt').strip()
+    openai.api_base = open_file('api_openai.txt').strip()
     system_message = open_file('system.txt')
     ALL_MESSAGES = list()
 
