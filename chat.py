@@ -47,7 +47,6 @@ def chatbot(conversation, temperature=0):
             spinner = Halo(text='AI', spinner='dots')
             spinner.start()
             openai.api_type = "azure"
-         ##   openai.api_base = "https://sixopenaiinstancefrance0001.openai.azure.com"
             openai.api_version = "2023-06-01-preview"
                         
             response = openai.ChatCompletion.create(engine="gpt4-32", messages=conversation, temperature=temperature)
