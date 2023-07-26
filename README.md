@@ -1,4 +1,4 @@
-# Reflective Journaling Chatbot -> Personal Fork
+# Reflective Journaling Chatbot -> Personal Fork -> Test
 
 This is a Python-based chatbot that uses OpenAI's GPT-4 model to generate reflective journaling responses. The chatbot
 takes user input and generates a response based on the conversation history.
