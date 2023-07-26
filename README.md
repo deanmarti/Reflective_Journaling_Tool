@@ -20,7 +20,7 @@ pip install openai
 4. Run the chatbot script:
 
 ```bash
-python chatbot.py
+python chat.py
 ```
 
 ## High-Level Description
