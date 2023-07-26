@@ -13,7 +13,7 @@ To set up and run the chatbot, follow these steps:
 pip install openai
 ```
 
-2. Create your API end point on Azure OpenAI. You can sign up for an API key at https://beta.openai.com/signup/.
+2. Create your API end point on Azure OpenAI. https://azure.microsoft.com/en-us/products/ai-services/openai-service
 
 3. Save your API key in a file named `key_openai.txt` and API base URL for Azure in `api_openai.txt` in the same directory as the chatbot script.
 
